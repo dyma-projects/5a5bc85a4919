@@ -1,0 +1,20 @@
+<h2><i>Composant directive</i></h2>
+<p *ngIf="status">p1</p>
+<p *ngIf="!status">p2</p>
+
+<h4><u>3 exemples de liaisons de données</u></h4>
+<p><b>1-binding de propriété (type:date) :</b></p>
+<input [type]="propriete_date"/>
+<br>
+<p><b>2-string interpolation :</b></p>
+{{data1}}
+<br>
+<p><b>3-binding d'évènement :</b></p>
+<div [style.color]="color" (click)="changeColor('green')">Le clique sur ce texte change la couleur de violet à vert</div>
+<hr>
+<button (click)="status=!status">Cliquer sur ce bouton pour cacher p1/afficher p2 et inversement</button>
+<hr>
+<p><b>Affichage de l'array avec ngFor</b></p>
+<ul>
+	<li *ngFor="let text of texts">{{text}}</li>
+</ul>
